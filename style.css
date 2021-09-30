@@ -60,12 +60,13 @@ body {
   min-width: 580px;
 
   overflow: hidden;
+  /* height: 100%; */
 }
 main{
-  height: 100vh;
-  overflow-y: scroll;
+  height: 100vh; 
+ overflow-y: scroll;
   scroll-snap-type: y mandatory;
-  scroll-behavior: smooth;
+  scroll-behavior: smooth; 
 }
 
 h2 {
@@ -78,7 +79,8 @@ h2 {
 
 nav {
   position: fixed;
-  width: 100vw;
+  /* width: 100vw; */
+  width: 100%;
   top: 0;
   z-index: 100;
 }
@@ -90,7 +92,6 @@ p {
 
 
 .nav {
-  width: 100%;
   background: linear-gradient(var(--dark-purple), transparent);
   padding: 0 100px;
 }
@@ -498,5 +499,16 @@ padding-left: 20px;
   #project p {
     font-size: 20px;
 
+  }
+}
+@media (max-width: 768px) {
+  body{
+    overflow: auto;
+    height: 100%;
+  }
+  body main {
+    height: 100%;
+    overflow-y: auto;
+    scroll-snap-type: none;
   }
 }
