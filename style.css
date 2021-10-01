@@ -458,6 +458,7 @@ padding-left: 20px;
 
   #home {
     display: block;
+    scroll-snap-align: end;
   }
 
   #home .dev {
