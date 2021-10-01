@@ -636,7 +636,6 @@ padding-left: 20px;
 
   #home {
     display: block;
-    /* scroll-snap-align: end; */
   }
 
   #home .dev {
@@ -684,14 +683,13 @@ padding-left: 20px;
   }
 }
 @media (max-width: 768px) {
-  /* body{
+  body{
     overflow: auto;
     height: 100%;
   }
   body main {
     height: 100%;
+    scroll-snap-type: none; 
     overflow-y: auto;
-    scroll-snap-type: none; */
-  /* } */
-
+  }
 }
