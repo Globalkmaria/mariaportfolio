@@ -67,6 +67,7 @@ main{
  overflow-y: scroll;
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth; 
+  overflow-x: hidden;
 }
 
 h2 {
@@ -133,8 +134,7 @@ p {
   grid-template: 100vh/ 1fr 1fr;
   grid-template-areas: "dev info";
   position: relative;
-
-  scroll-snap-align: start;
+  /* scroll-snap-align: start; */
 }
 
 
@@ -235,16 +235,159 @@ p {
   font-size: 33px;
   font-family: Mosk-700;
   letter-spacing: 0px;
+  position: relative;
+  transition: 200ms;
 }
 
-.info__intro>h3>span {
+.info__intro>h3>.info__maria {
   text-decoration: underline;
+  position: relative;
 }
 
-.info__intro>h3>span:hover {
+
+.info__intro>h3>.info__maria:hover {
   color: var(--bg);
 }
+.info__intro>h3>.info__maria:hover .maria__imges{
+display: block;
+}
+.maria__imges{
+  display: none;
+  position: absolute;
+  top: -200px;
+  left: 0px;
+  transition: 200ms;
+}
+.maria__img{
+  opacity: 0;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  position: absolute;
+  transition: 200ms;
+}
+#maria_1{
+  animation:  3s 0ms infinite linear  maria_left1; 
+}
+#maria_2{
+  animation:  4s 20ms infinite linear  maria_right1;
+}
+#maria_3{
+  animation:  3s 300ms infinite linear  maria_left2;
+}
+#maria_4{
+  animation:  4s 320ms infinite linear  maria_right2;
+}
+#maria_5{
+  animation:  3s 500ms infinite linear  maria_left1;
+}
+#maria_6{
+  animation:  3s 600ms infinite linear  maria_right1;
+}
+#maria_7{
+  animation:  3s 680ms infinite linear  maria_left2;
+}
+#maria_8{
+  animation:  4s 750ms infinite linear  maria_right2;
+}
+#maria_9{
+  animation:  5s 850ms infinite linear  maria_left1;
+}
+#maria_10{
+  animation:  3s 1000ms infinite linear  maria_right1;
+}
+#maria_11{
+  animation:  4s 1050ms infinite linear  maria_left1;
+}
+#maria_12{
+  animation:  5s 1100ms infinite linear  maria_left2;
+}
+#maria_13{
+  animation:  4s 1250ms infinite linear  maria_right2;
+}
+#maria_14{
+  animation:  5s 1400ms infinite linear  maria_left1;
+}
+#maria_15{
+  animation:  3s 1450ms infinite linear  maria_right1;
+}
+#maria_16{
+  animation:  4s 1450ms infinite linear  maria_left2;
+}
+#maria_17{
+  animation:  3s 1500ms infinite linear  maria_right2;
+}
+#maria_18{
+  animation:  4s 1600ms infinite linear  maria_left1;
+}
+#maria_18{
+  animation:  5s 1650ms infinite linear  maria_right1;
+}
+#maria_19{
+  animation:  4s 1750ms infinite linear  maria_left2;
+}
 
+@keyframes maria_left1 {
+  0% {
+    opacity: 1;
+  }
+  10%{
+    transform: translate(-15vh , -5vh);
+  }
+  50%{
+    opacity: 0.7;
+  }
+  100%{
+    transform: translate(-35vw , 100vh);
+    opacity: 0;
+  }
+}
+@keyframes maria_left2 {
+  0% {
+    opacity: 1;
+  }
+  10%{
+    transform: translate(-10vh , -10vh);
+  }
+  50%{
+    opacity: 0.7;
+  }
+  100%{
+    transform: translate(-25vw , 100vh);
+    opacity: 0;
+  }
+}
+@keyframes maria_right1 {
+  0% {
+    opacity: 1;
+  }
+  10%{
+    transform: translate(15vh , -7vh);
+  }
+  50%{
+    opacity: 0.7;
+  }
+  100%{
+    transform: translate(15vw , 100vh);
+    opacity: 0;
+  }
+}
+@keyframes maria_right2 {
+  0% {
+    opacity: 1;
+  }
+  10%{
+    transform: translate(12vh , -15vh);
+  }
+  50%{
+    opacity: 0.7;
+  }
+  100%{
+    transform: translate(28vw , 110vh);
+    opacity: 0;
+  }
+}
 .info__intro>p {
   display: block;
   padding: 0 25px;
@@ -254,7 +397,13 @@ p {
   text-align: center;
   font-family: Mosk-600;
 }
-
+.info__intro .info__imp-text{
+  padding: 5px;
+  border-radius: 4px;
+  background-color:var(--bg);
+  color:  white;
+  text-shadow: 1px 1px 2px var(--bg);
+}
 /* Skill */
 #skills {
   background: var(--dark-purple);
@@ -264,7 +413,7 @@ p {
   justify-content: center;
   align-items: center;
 
-  scroll-snap-align: center;
+  /* scroll-snap-align: center; */
 }
 
 .skills__container {
@@ -316,7 +465,7 @@ padding-left: 20px;
   width: 100%;
   margin: auto;
 
-  scroll-snap-align: start;
+  /* scroll-snap-align: start; */
 }
 
 .project__container {
@@ -401,7 +550,7 @@ padding-left: 20px;
   background: var(--dark-purple);
   padding: 20px;
 
-  scroll-snap-align: start;
+  /* scroll-snap-align: start; */
 }
 
 #contact>h2 {
@@ -458,7 +607,7 @@ padding-left: 20px;
 
   #home {
     display: block;
-    scroll-snap-align: end;
+    /* scroll-snap-align: end; */
   }
 
   #home .dev {
