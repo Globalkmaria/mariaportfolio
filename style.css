@@ -446,6 +446,7 @@ padding-left: 20px;
   display: flex;
   justify-content: center;
   transition: 300ms;
+  position: relative;
 }
 
 .skill:hover,
@@ -453,8 +454,28 @@ padding-left: 20px;
   box-shadow: 0 1em 1em 0.3em rgb(255, 0, 247);
   transform: translateY(-1em);
 }
-
+.skill:hover .skill__name,
+.skill:focus .skill__name {
+  opacity: 0;
+}
+.skill:hover .skill__icon,
+.skill:focus .skill__icon {
+  opacity: 1;
+}
+.skill__icon{
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 60px;
+}
 .skill__name {
+  opacity: 1;
   font-size: 40px;
   margin: auto;
 }
