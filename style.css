@@ -401,8 +401,12 @@ display: block;
   padding: 5px;
   border-radius: 4px;
   background-color:var(--bg);
-  color:  white;
-  text-shadow: 1px 1px 2px var(--bg);
+  color: #FAFAFA;
+}
+.info__intro .info__imp-text:hover{
+  background-color:#FAFAFA;
+  color:  var(--bg);
+
 }
 /* Skill */
 #skills {
