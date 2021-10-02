@@ -129,6 +129,7 @@ p {
 
 /* HOME */
 #home {
+  z-index: 3;
   width: 100%;
   margin: auto;
   display: grid;
