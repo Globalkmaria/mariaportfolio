@@ -8,7 +8,7 @@
   --dark-purple: rgb(33, 33, 48);
 }
 
-@font-face {
+/* @font-face {
   font-family: Open-Sauce-Sans-Medium;
   src: url(./font/Open-Sauce-Sans/TTF/OpenSauceSans-Medium.ttf);
 }
@@ -16,7 +16,7 @@
 @font-face {
   font-family: Open-Sauce-Sans-Regular;
   src: url(./font/Open-Sauce-Sans/TTF/OpenSauceSans-Regular.ttf);
-}
+} */
 
 @font-face {
   font-family: Mosk-500;
