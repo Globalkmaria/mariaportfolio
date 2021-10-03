@@ -464,11 +464,11 @@ p {
 .info__intro .info__imp-text:hover {
   background-color: #FAFAFA;
   color: var(--bg);
-
 }
 
 /* Skill */
 #skills {
+  min-height: 100vh;
   background: var(--dark-purple);
   padding: 60px 20px;
   display: flex;
@@ -608,7 +608,7 @@ p {
 
 /* Project */
 #project {
-  padding: 20px;
+  /* padding: 20px; */
   width: 100%;
   margin: auto;
 
@@ -616,6 +616,11 @@ p {
 }
 
 .project__container {
+  padding: 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   max-width: 1400px;
   width: 100%;
   margin: auto;
@@ -752,7 +757,7 @@ p {
 }
 
 /* media */
-@media (min-width: 1300px) {
+@media (min-width: 1700px) {
   body #home{
     grid-template: 100%/ 1fr 1fr;
   }
@@ -767,8 +772,15 @@ p {
   .info .info__intro>p {
     font-size: 30px;
   }
+  body #skills {
+    min-height: 0px;
+  }
   #skills .skill {
     animation: up-down1300 1s linear infinite alternate;
+  }
+  #skills .skill:hover,
+  .skill:focus {
+    animation: none;
   }
   #skills .skills__inner{
     min-height: 600px;
@@ -784,6 +796,10 @@ p {
       transform: translateY(10%);
       box-shadow: 0 32px 11px 2px rgb(255, 0, 247);
     }
+  }
+  #project .project__container {
+    display: block;
+    min-height: 0px;
   }
 }
 
