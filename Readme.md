@@ -1,3 +1,3 @@
 # My portfolio
 
-Link ➡️ https://globalkmaria.github.io/mariaprotfolio/
+Link ➡️ https://globalkmaria.github.io/mariaportfolio/
